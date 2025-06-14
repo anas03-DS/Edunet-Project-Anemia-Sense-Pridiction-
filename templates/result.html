@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anemia Sense</title>
+  <link rel="stylesheet" href="../static/result.css">
+</head>
+<body>
+  <div class = "top">
+    <div class = "left">
+      <label class = "text">Anemia Sense
+
+    </div>
+
+
+    <div class = "middle">
+      <div class = "home">
+        <a href= "{{ url_for('home') }}"><button>Home</button></a>
+      </div>
+      <div class = "about">
+        <a href = "{{ url_for('about') }}"><button>About</button></a>
+      </div>
+      <div class = "predict">
+        <a href = "{{ url_for('predict') }}"><button>Predict</button></a>
+      </div>
+      <div class = "contact">
+        <a href = "{{ url_for('contact') }}"><button>Contact</button></a>
+      </div>
+    </div>
+
+
+
+    <div class = "right">
+      <div class = "check">
+        <a href = "{{ url_for('predict') }}"><button>
+          Check
+        </button></a>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <div class = "container">
+
+    <br><br><br><br><br><br><br><br><br>
+    <h1 class = "heading1">Result</h1>
+    <h3 class="res">{{prediction_text}}</h3>
+  </div>
+  <br><br>
+</body>
+</html>

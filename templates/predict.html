@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anemia Sense</title>
+  <link rel="stylesheet" href="../static/predict.css">
+</head>
+<body>
+  <div class = "top">
+    <div class = "left">
+      <span class = "text">Anemia Sense</span>
+
+    </div>
+
+
+    <div class = "middle">
+      <div class = "home">
+        <a href= "{{ url_for('home') }}"><button>Home</button></a>
+      </div>
+      <div class = "about">
+        <a href = "{{ url_for('about') }}"><button>About</button></a>
+      </div>
+      <div class = "predict">
+        <a href = "{{ url_for('predict') }}"><button>Predict</button></a>
+      </div>
+      <div class = "contact">
+        <a href = "{{ url_for('contact') }}"><button>Contact</button></a>
+      </div>
+    </div>
+
+
+
+    <div class = "right">
+      <div class = "check">
+        <a href = "{{ url_for('predict') }}"><button>
+          Check
+        </button></a>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br><br><br>
+
+  <div class = "container">
+    <div class = "left-content">
+      <h1 class="text-left">Enter the details: </h1> 
+    </div>
+    <div class = "right-content">
+      <form action = "{{ url_for('predict') }}" method="POST">
+        <br><br><br>
+        <label for="gender">Gender:</label> 
+        <input type="text" id = "gender" name="gender" placeholder="Enter your Gender" maxlength="6" required>
+        <br><br>
+        <label for="hemoglobin">Hemoglobin(Range: 7-16):</label>
+        <input type="number" id="hemoglobin"name="hemoglobin" placeholder="Enter your Hemoglobin Level" min="6" max="16" step="any" required>
+        <br><br>
+        <label for="mch">Mean Corpuscular Hemoglobin(Range:16-30)</label> 
+        <input type="number" id="mch" name="mch" placeholder="Enter your Mean Corpuscular Hemoglobin level" min="16" max="30" step="any" required>
+        <br><br>
+        <label for="mchc">Mean Corpuscular Hemoglobin Concentration(Range:28-34)</label> 
+        <input type="number" id="mchc" name="mchc" placeholder="Enter your Mean Corpuscular Hemoglobin Concentration level" min="28" max="34" step="any" required>
+        <br><br>
+        <label for="mcv">Mean Corpuscular Volume(Range:70-100)</label> 
+        <input type="number" id="mcv" name="mcv" placeholder="Enter your Mean Corpuscular Volume" min="70" max="100" step="any" required>
+        <br><br>
+        <button type="submit" class="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
